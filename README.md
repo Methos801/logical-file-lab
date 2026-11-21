@@ -1,12 +1,21 @@
 # Logical File Lab
 
-Convert local source files into portable Markdown and JSON, with an audit trail
-for every selected source. Logical File Lab preserves the extracted text and
-keeps the original files in place.
+Prepare legal source files for AI-assisted review. When a statute set or
+exhibit bundle is converted for AI, missing text can be hard to spot. Logical
+File Lab creates portable Markdown and JSON with the full extracted text,
+the identity of each original, and any coverage gaps that need review.
 
 [Open the 90-second demo](https://methos801.github.io/logical-file-lab/#demo) · [Read the Windows user manual](docs/user-manual.md) · [Browse the synthetic examples](examples/)
 
 ![New Conversion with a fictional source folder and Markdown plus JSON selected](docs/screenshots/new-conversion.png)
+
+## Two ways to use it
+
+- **Windows app.** Choose sources, review the plan, and inspect the outputs and receipt.
+- **Command line.** Use the same engine from scripts or other workflows. It returns
+  results as JSON and streams structured progress events as JSONL.
+
+Conversion runs offline and keeps originals in place. You choose which outputs to provide to an AI tool.
 
 ## Try the Cedar Relay walkthrough
 
@@ -41,5 +50,4 @@ are 64 MiB. The preview works best with UTF-8 text, Markdown, CSV and TSV.
 Word and PDF extraction can depend on installed converters. Review coverage
 holds alongside the original source.
 
-Logical File Lab's deterministic workflow runs offline. Its outputs include
-extracted source text even when structural coverage needs review.
+The outputs include extracted source text even when structural coverage needs review.

@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A short walkthrough of Logical File Lab, a local Windows tool that converts source files into auditable Markdown and JSON.">
+  <meta name="description" content="Prepare statutes, exhibits, and other source files for AI-assisted legal review. Keep exact extracted text, source identity, and coverage holds in auditable Markdown and JSON.">
   <meta name="theme-color" content="#143338">
-  <title>Logical File Lab | Windows demo</title>
+  <title>Logical File Lab | Prepare legal sources for AI review</title>
   <link rel="stylesheet" href="demo.css">
   <script src="demo.js" defer></script>
 </head>
@@ -26,9 +26,10 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="shell hero-grid">
         <div>
-          <p class="eyebrow">Local document conversion</p>
-          <h1 id="hero-title">Turn source files into auditable Markdown and JSON.</h1>
-          <p class="hero-copy">Logical File Lab keeps originals in place, preserves extracted text, and records what happened to each selected source. Run a deterministic conversion offline and use the receipt to check the results.</p>
+          <p class="eyebrow">Local source preparation</p>
+          <h1 id="hero-title">Prepare legal sources for AI-assisted review.</h1>
+          <p class="hero-copy">Legal review depends on exact wording and knowing where it came from. When you convert a statute set or exhibit bundle for AI, missing text can be hard to spot.</p>
+          <p class="hero-copy">Logical File Lab prepares Markdown and JSON for AI tools, with the full extracted text, the identity of each original, and any coverage gaps that need review.</p>
           <div class="actions">
             <a class="button" href="#demo">Try the guided demo</a>
             <a class="quiet-link" href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md">Read the user manual</a>
@@ -45,7 +46,7 @@
       <div class="section-heading">
         <p class="eyebrow">90-second walkthrough</p>
         <h2 id="demo-title">Follow a fictional workshop’s records</h2>
-        <p>Start with a Markdown note, an inventory CSV, and a text log. Inspect a saved plan, compare a complete source with its exports, then see how Windows recovery handled an interrupted run.</p>
+        <p>Start with a Markdown note, an inventory CSV, and a text log. Follow one passage from the original into both exports, then use the receipt to see which sources passed and which need review.</p>
       </div>
 
       <div class="demo-controls" role="group" aria-label="Choose a walkthrough step" hidden>
@@ -131,8 +132,10 @@ The last entry is a blue paper tag reading CR-FINAL-317.</code></pre>
 
     <section class="shell section scope" aria-labelledby="scope-title">
       <div>
-        <h2 id="scope-title">Explore the preview</h2>
-        <p>The Windows build is in private review. This public demo includes fictional inputs, real text exports from the preview, and a user manual. The current preview supports UTF-8 text, Markdown, CSV, and TSV most directly. Its source and bank text limits are 64 MiB. Word and PDF extraction can depend on installed converters and may carry coverage holds.</p>
+        <h2 id="scope-title">Use it at your desk or in a workflow</h2>
+        <p>Use the <strong>Windows app</strong> to choose sources, review a plan, and inspect the results. For recurring work, run the <a href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md#command-line-use-and-local-storage">same engine from a script</a> and read its structured progress and results.</p>
+        <p>Conversion runs offline and leaves the originals in place. You choose which outputs to provide to an AI tool.</p>
+        <p>The Windows build is in private review. The preview handles UTF-8 text, Markdown, CSV, and TSV directly, with 64 MiB source and bank text limits. Word and PDF extraction can depend on installed converters and may carry coverage holds.</p>
       </div>
       <div class="scope-links">
         <a href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md">Windows user manual</a>
