@@ -1,0 +1,224 @@
+{
+  "schema_version": "0.1",
+  "logical_file_metadata": {
+    "logical_file_name": "01_project_notes",
+    "logical_file_id": "01_project_notes_6ebb85cfc1",
+    "lfl_version": "0.1",
+    "engine": "deterministic",
+    "conversion_date": "2026-11-21",
+    "target_surfaces": [
+      "local"
+    ],
+    "output_verbosity": "full",
+    "schema_variant": "audit_md",
+    "table_policy": "preserve",
+    "packing_policy": "none",
+    "research_citation_date": "2026-06-28",
+    "promotion_status": "draft",
+    "intended_use": "Source-grounding file for AI retrieval.",
+    "not_for": "Final conclusions, source replacement, or proof of platform readiness.",
+    "classification": "generic",
+    "classification_family": "undefined",
+    "classification_confidence": 0.0,
+    "classification_state": "undefined",
+    "classification_runner_up": "document",
+    "classification_stages": [
+      {
+        "stage": "family",
+        "selected": "undefined",
+        "reason": "no family cleared threshold",
+        "candidates": {
+          "legal_authority": 0.0,
+          "tabular": 0.0,
+          "document": 0.2
+        }
+      }
+    ],
+    "sufficiency": "sufficient",
+    "recombination": "keep_whole",
+    "recombination_units": 2,
+    "recombination_basis": "structure",
+    "decision_stages": [
+      {
+        "stage": "sufficiency",
+        "result": "sufficient",
+        "chars": 254
+      },
+      {
+        "stage": "recombination",
+        "result": "keep_whole",
+        "units": 2,
+        "basis": "structure"
+      }
+    ]
+  },
+  "universal_manifest": {
+    "source_ids": [
+      "SRC-2D210F82C16EBB85CFC1"
+    ],
+    "critical_first_read_sections": [
+      "logical_file_metadata",
+      "source_role_lock",
+      "source_scope_controls",
+      "validation_and_promotion"
+    ]
+  },
+  "source_role_lock": {
+    "statement": "This file represents only the source identified above.",
+    "constraints": [
+      "May be used as source text for propositions traceable to this source.",
+      "End-users are responsible for verifying currentness and authority at time of use.",
+      "Must not displace governing instruments, verified law, user instructions, or other selected source files.",
+      "If this file conflicts with another source, report the conflict instead of resolving it silently."
+    ]
+  },
+  "retrieval_index": {
+    "sections": [
+      {
+        "section_id": "source.summary",
+        "title": "Source orientation",
+        "use": "Use only to navigate the source."
+      },
+      {
+        "section_id": "source.content",
+        "title": "Converted source content",
+        "use": "Use as the primary converted text."
+      },
+      {
+        "section_id": "source.holds",
+        "title": "Holds and limitations",
+        "use": "Use before relying on the source."
+      }
+    ],
+    "trigger_phrases": [],
+    "currentness_signals": []
+  },
+  "fixed_mapping_index": {
+    "sources": [
+      {
+        "source_id": "SRC-2D210F82C16EBB85CFC1",
+        "source_file_name": "01_project_notes.md",
+        "source_path": "01_project_notes.md",
+        "source_type": "md (Markdown)",
+        "source_size_bytes": 254,
+        "source_mtime": "2026-11-21T04:53:37.475765+00:00",
+        "sha256_original": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+        "extraction_method": "plain",
+        "sha256_extracted": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+        "sha256_pre_scrub": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+        "extraction_status": "ok",
+        "converter_failures": [],
+        "extraction_note": "",
+        "scrub_policy": "none",
+        "scrub_actions": [],
+        "scrub_char_delta": 0
+      }
+    ]
+  },
+  "source_scope_controls": {
+    "included": [
+      "SRC-2D210F82C16EBB85CFC1"
+    ],
+    "excluded": []
+  },
+  "local_controls": {
+    "surface": "local",
+    "mode": "1:1",
+    "profile_preference": "md",
+    "verbosity": "full",
+    "schema_variant": "audit_md",
+    "table_policy": "preserve",
+    "packing_policy": "none",
+    "research_citation_date": "2026-06-28",
+    "recommended_layout": "Flat Output/ folder; 00_manifest controller (or 00_*_bank) routes the set.",
+    "citation_rule": "Cite the source_id (e.g., SRC-XXXXXXXX) for every proposition.",
+    "notes": [
+      "Engine is Ollama; bring your own model.",
+      "Use the manifest/bank as the routing entry point."
+    ],
+    "applies_to_source_ids": [
+      "SRC-2D210F82C16EBB85CFC1"
+    ]
+  },
+  "anti_recursion_controls": {
+    "statement": "This logical file must not be fed back to a model as a source for generating additional source documents. It is a read artifact, not a generation artifact."
+  },
+  "human_review_gate": {
+    "required": false,
+    "reason": "Deterministic build; no LLM-generated content."
+  },
+  "validation_and_promotion": {
+    "overall_status": "PASS",
+    "no_loss_register": {
+      "source_text_truncated": false,
+      "source_text_modified": false,
+      "note": "Section 6 / source_text is always a verbatim copy of the extracted text."
+    },
+    "checks": [
+      {
+        "check": "metadata_present",
+        "result": "pass",
+        "note": "All required metadata populated."
+      },
+      {
+        "check": "source_role_lock_present",
+        "result": "pass",
+        "note": "Block present."
+      },
+      {
+        "check": "converted_content_present",
+        "result": "pass",
+        "note": "Full text extracted."
+      },
+      {
+        "check": "holds_recorded",
+        "result": "pass",
+        "note": "No holds."
+      },
+      {
+        "check": "no_unsupported_merging",
+        "result": "pass",
+        "note": "Single source only."
+      },
+      {
+        "check": "sha256_original",
+        "result": "pass",
+        "note": "0e9d6d4dc28163f3…"
+      },
+      {
+        "check": "sha256_extracted",
+        "result": "pass",
+        "note": "0e9d6d4dc28163f3…"
+      }
+    ]
+  },
+  "source_documents": [
+    {
+      "source_id": "SRC-2D210F82C16EBB85CFC1",
+      "source_file_name": "01_project_notes.md",
+      "source_type": "md (Markdown)",
+      "conversion_status": "complete",
+      "extraction_status": "ok",
+      "holds": [],
+      "sha256_original": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+      "sha256_extracted": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+      "sha256_pre_scrub": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+      "extraction_method": "plain",
+      "converter_failures": [],
+      "source_text_basis": "full_extraction",
+      "derivatives": [],
+      "adapter": "generic",
+      "source_path": "01_project_notes.md",
+      "scrub_policy": "none",
+      "scrub_actions": [],
+      "scrub_char_delta": 0,
+      "orientation_summary": "[Not generated — deterministic engine (Tier-0). No LLM calls.]",
+      "source_text": "# Cedar Relay demo workbench\n\nThe Cedar Relay is a fictional volunteer workshop used to exercise the converter.\nThe planning box contains two trays marked Amber and Juniper.\n\n## Closing inventory\n\nThe last entry is a blue paper tag reading CR-FINAL-317.\n",
+      "text_anomalies": [],
+      "recombination_metadata": {}
+    }
+  ],
+  "domain_metadata": {},
+  "extracted_tables": [],
+  "citation_map": []
+}

@@ -1,1 +1,3 @@
 examples/** -text
+docs/demo/cedar-relay-*.md -text
+docs/demo/cedar-relay-logical.json -text

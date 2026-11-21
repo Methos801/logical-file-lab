@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A short walkthrough of Logical File Lab, a local Windows tool that converts source files into auditable Markdown and JSON.">
+  <meta name="theme-color" content="#143338">
+  <title>Logical File Lab | Windows demo</title>
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="shell site-nav" aria-label="Main navigation">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">LFL</span> Logical File Lab</a>
+      <div class="nav-links">
+        <a href="#demo">Demo</a>
+        <a href="#windows-test">Windows test</a>
+        <a href="https://github.com/Methos801/logical-file-lab">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Local document conversion</p>
+          <h1 id="hero-title">Turn source files into auditable Markdown and JSON.</h1>
+          <p class="hero-copy">Logical File Lab keeps originals in place, preserves extracted text, and records what happened to each selected source. Run a deterministic conversion offline and use the receipt to check the results.</p>
+          <div class="actions">
+            <a class="button" href="#demo">Try the guided demo</a>
+            <a class="quiet-link" href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md">Read the user manual</a>
+          </div>
+        </div>
+        <figure class="hero-preview">
+          <img src="screenshots/new-conversion.png" width="1280" height="840" alt="Logical File Lab New Conversion screen with a fictional source folder, separate destination, and Markdown and JSON selected">
+          <figcaption>Windows preview with fictional sample paths</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="shell section" id="demo" aria-labelledby="demo-title">
+      <div class="section-heading">
+        <p class="eyebrow">90-second walkthrough</p>
+        <h2 id="demo-title">Follow a fictional workshop’s records</h2>
+        <p>Start with a Markdown note, an inventory CSV, and a text log. Inspect a saved plan, compare a complete source with its exports, then see how Windows recovery handled an interrupted run.</p>
+      </div>
+
+      <div class="demo-controls" role="group" aria-label="Choose a walkthrough step" hidden>
+        <button type="button" aria-controls="plan" aria-pressed="true">Review the plan</button>
+        <button type="button" aria-controls="exports" aria-pressed="false">Compare the text</button>
+        <button type="button" aria-controls="receipt" aria-pressed="false">Read the results</button>
+      </div>
+
+      <article class="step plan-step" id="plan" data-step aria-labelledby="plan-title">
+        <div>
+          <h3 id="plan-title">See what will run</h3>
+          <p>The saved plan lists all three selected sources. Choose <strong>One logical output per source</strong> and <strong>Markdown + JSON</strong> to produce two exports for each source.</p>
+          <ul class="file-list" aria-label="Fictional source files">
+            <li><code>01_project_notes.md</code></li>
+            <li><code>02_inventory.csv</code></li>
+            <li><code>03_field_log.txt</code></li>
+          </ul>
+          <a href="https://github.com/Methos801/logical-file-lab/tree/main/examples/Sources">Open the three source files</a>
+        </div>
+        <a class="screenshot-link" href="screenshots/preflight.png">
+          <img src="screenshots/preflight.png" width="1280" height="1120" alt="Saved plan for three synthetic sources with the Start conversion control">
+          <span>Open the plan screenshot</span>
+        </a>
+      </article>
+
+      <article class="step" id="exports" data-step aria-labelledby="exports-title">
+        <h3 id="exports-title">Compare a source with its exports</h3>
+        <p>In both exports, find the closing inventory line. It sits in the full extracted text and can be traced back to the original note.</p>
+        <div class="comparison">
+          <div>
+            <h4>Original Markdown</h4>
+            <pre><code>## Closing inventory
+
+The last entry is a blue paper tag reading CR-FINAL-317.</code></pre>
+            <a href="demo/cedar-relay-source.md" download>Download the original</a>
+          </div>
+          <div>
+            <h4>Converted text</h4>
+            <pre><code>## Closing inventory
+
+The last entry is a blue paper tag reading CR-FINAL-317.</code></pre>
+            <div class="file-links">
+              <a href="demo/cedar-relay-logical.md" download>Download Markdown</a>
+              <a href="demo/cedar-relay-logical.json" download>Download JSON</a>
+            </div>
+          </div>
+        </div>
+        <p class="step-note">Both export formats also reproduced the whole <a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Unicode-Sources/01_fictional_statute_set.txt">fictional 4,500-section statute set</a>, including its final marker <code>PAPER-FERRY-4500</code>. <a href="screenshots/results-unicode.png">See the Windows results</a>.</p>
+      </article>
+
+      <article class="step result-step" id="receipt" data-step aria-labelledby="receipt-title">
+        <div>
+          <h3 id="receipt-title">Account for every selected source</h3>
+          <p>The receipt for the three-file run recorded 3 selected, 3 passed, and 6 source exports. The manifest routes readers to the individual source records.</p>
+          <p>A separate sample with duplicate CSV headers shows how a review hold appears. Its original text stays available in both exports.</p>
+          <div class="file-links">
+            <a href="demo/receipt-excerpt.json">Read the synthetic receipt excerpt</a>
+            <a href="#windows-test">See the recovery test</a>
+          </div>
+        </div>
+        <a class="screenshot-link" href="screenshots/results-hold.png">
+          <img src="screenshots/results-hold.png" width="1280" height="1380" alt="Results for a synthetic CSV with duplicate headers showing the review hold and both exports">
+          <span>Open the hold screenshot</span>
+        </a>
+      </article>
+    </section>
+
+    <section class="evidence" id="windows-test" aria-labelledby="evidence-title">
+      <div class="shell evidence-grid">
+        <div>
+          <p class="eyebrow">Windows 11 x64</p>
+          <h2 id="evidence-title">Verified recovery on a second machine</h2>
+          <p>The same preview ZIP passed launch, synthetic conversion, and forced interruption and recovery on a second Windows machine. Once one source was committed, the test stopped the controller and recovered the original job from the desktop app.</p>
+          <p class="evidence-note">The fixture’s final receipt accounted for both sources, with one pass and one expected RTF coverage hold. The coverage hold kept the flattened source text available for review.</p>
+        </div>
+        <dl class="proof">
+          <div><dt>Committed exports</dt><dd>Both reused, with their bytes and timestamps intact</dd></div>
+          <div><dt>Source fidelity</dt><dd>Both originals unchanged and all four exports checked for full text</dd></div>
+          <div><dt>Process cleanup</dt><dd>The fixture converter and its child stopped within 74 ms in this run</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="shell section scope" aria-labelledby="scope-title">
+      <div>
+        <h2 id="scope-title">Explore the preview</h2>
+        <p>The Windows build is in private review. This public demo includes fictional inputs, real text exports from the preview, and a user manual. The current preview supports UTF-8 text, Markdown, CSV, and TSV most directly. Its source and bank text limits are 64 MiB. Word and PDF extraction can depend on installed converters and may carry coverage holds.</p>
+      </div>
+      <div class="scope-links">
+        <a href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md">Windows user manual</a>
+        <a href="https://github.com/Methos801/logical-file-lab/tree/main/examples">Synthetic examples</a>
+        <a href="https://github.com/Methos801">Developer profile</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">Logical File Lab <span>·</span> <a href="https://github.com/Methos801/logical-file-lab">Public GitHub project</a></div>
+  </footer>
+</body>
+</html>
