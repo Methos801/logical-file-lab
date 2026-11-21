@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Check what made it into your AI review files. Compare extracted legal source text with the originals, trace passages to their files, and see what still needs review.">
+  <meta name="description" content="See how Logical File Lab keeps nearly identical amendments separately identifiable, so you can ask AI for exact wording and check it against each original.">
   <meta name="theme-color" content="#143338">
   <title>Logical File Lab | Prepare legal sources for AI review</title>
   <link rel="stylesheet" href="demo.css">
@@ -28,9 +28,9 @@
         <div>
           <p class="eyebrow">Source preparation for legal AI</p>
           <h1 id="hero-title">Check what made it into your AI review files.</h1>
-          <p class="hero-copy">Before you ask AI about a statute set or an exhibit bundle, you need to know what the conversion captured. Logical File Lab prepares Markdown and JSON you can inspect alongside the originals.</p>
+          <p class="hero-copy">Two amendments can look nearly identical and give different deadlines. A general summary can leave out the wording that matters. Logical File Lab prepares Markdown and JSON with the full extracted text and a distinct record for each source.</p>
           <div class="actions">
-            <a class="button" href="#exports">Compare an original with its exports</a>
+            <a class="button" href="#amendments">Try the amendment example</a>
             <a class="quiet-link" href="#demo">See the full walkthrough</a>
           </div>
           <p class="hero-note">Conversion runs offline. The Windows build is in private review.</p>
@@ -41,19 +41,47 @@
           </dl>
         </div>
         <aside class="hero-sample" aria-labelledby="sample-title">
-          <p class="eyebrow">Fictional statute set</p>
-          <h2 id="sample-title">Check the end of a long source</h2>
-          <p class="sample-source"><a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Unicode-Sources/01_fictional_statute_set.txt"><code>01_fictional_statute_set.txt</code></a> <span>4,500 sections</span></p>
+          <p class="eyebrow">Fictional declaration amendments</p>
+          <h2 id="sample-title">Same section, different notice period</h2>
           <div class="sample-text">
-            <h3>Final line in the original</h3>
-            <p><code>FINAL SYNTHETIC STATUTE MARKER: <strong>PAPER-FERRY-4500.</strong></code></p>
+            <h3><a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Legal-Amendments/01_notice_amendment.md">Amendment 01</a> <span>Section 4.2</span></h3>
+            <p>The association must deliver written notice at least <strong>ten days</strong> before a special meeting.</p>
           </div>
           <div class="sample-text sample-export">
-            <h3>Final line in Markdown and JSON</h3>
-            <p><code>FINAL SYNTHETIC STATUTE MARKER: <strong>PAPER-FERRY-4500.</strong></code></p>
+            <h3><a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Legal-Amendments/02_notice_amendment.md">Amendment 02</a> <span>Section 4.2</span></h3>
+            <p>The association must deliver written notice at least <strong>thirty days</strong> before a special meeting.</p>
           </div>
-          <p class="sample-note">The Windows test compared the full source with both exports. <a href="screenshots/results-unicode.png">See the result</a>.</p>
+          <p class="sample-note">Both clauses are preserved in one bank under their own source IDs. <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_sources_0001_bank.md">See the Markdown bank</a>.</p>
         </aside>
+      </div>
+    </section>
+
+    <section class="amendment-section" id="amendments" aria-labelledby="amendments-title">
+      <div class="shell section">
+        <div class="section-heading">
+          <h2 id="amendments-title">Ask for the clause in each amendment</h2>
+          <p>The Lab’s manifest lists each original filename, source ID, and the exports that contain it. Both records are in one bank here. Each retains its full extracted text, and each outline includes Section 4.2.</p>
+        </div>
+        <div class="amendment-grid">
+          <div class="amendment-panel">
+            <h3>Find both source records</h3>
+            <ul class="amendment-register" aria-label="Fictional amendment source IDs">
+              <li><a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Legal-Amendments/01_notice_amendment.md">01_notice_amendment.md</a><code>SRC-31CABEF335D9416E49ED</code></li>
+              <li><a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Legal-Amendments/02_notice_amendment.md">02_notice_amendment.md</a><code>SRC-52BECEB081AB9AFE95C3</code></li>
+            </ul>
+            <div class="file-links">
+              <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_manifest_controller.md">Read the manifest</a>
+              <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_sources_0001_bank.md" download>Download Markdown bank</a>
+              <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_sources_0001_bank.json" download>Download JSON bank</a>
+            </div>
+          </div>
+          <div class="amendment-panel">
+            <h3>Ask for wording you can check</h3>
+            <blockquote class="amendment-prompt">Use the manifest and the bank. Quote Section 4.2 from each amendment. Include the original filename and source ID with each quote. Flag any missing or held source.</blockquote>
+            <p>Check each quotation against Section 4.2 in the named original. Look for <strong>ten days</strong> in the first and <strong>thirty days</strong> in the second. How the AI tool loads and searches the files determines what it retrieves.</p>
+          </div>
+        </div>
+        <p class="amendment-proof">We checked that both formats preserved the full text and the same source IDs in all three packaging modes. The combined run’s receipt accounts for both sources and records hashes for the published exports. <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/run_receipt.json">View the receipt</a> · <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/99_validation_note.md">Read the validation note</a></p>
       </div>
     </section>
 
@@ -179,6 +207,7 @@ The last entry is a blue paper tag reading CR-FINAL-317.</code></pre>
     <section class="shell test-note" id="windows-test" aria-labelledby="test-title">
       <h2 id="test-title">Preview test notes</h2>
       <p>The same preview ZIP passed startup, synthetic conversion, and forced interruption and recovery on a second Windows 11 x64 computer. The recovery run resumed the original job, preserved the two completed exports, and verified full text in all four exports.</p>
+      <p>In a separate run, both formats matched the complete <a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Unicode-Sources/01_fictional_statute_set.txt">fictional 4,500-section statute set</a>, through the last line. <a href="screenshots/results-unicode.png">See the Windows results</a>.</p>
     </section>
   </main>
 

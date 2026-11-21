@@ -58,11 +58,10 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-siz
 .hero-sample { min-width: 0; padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid #b2c9bf; border-radius: .75rem; background: var(--paper); color: var(--body); box-shadow: 0 .8rem 2.4rem #071f2480; }
 .hero-sample .eyebrow { color: var(--teal); margin-bottom: .55rem; }
 .hero-sample h2 { font-size: clamp(1.65rem, 3vw, 2.3rem); letter-spacing: -.035em; }
-.sample-source { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .8rem; margin: .85rem 0 1.15rem; }
-.sample-source code, .sample-text code { overflow-wrap: anywhere; }
-.sample-source span { color: var(--muted); font-size: .9rem; }
 .sample-text { padding: .75rem .85rem; margin-block: .6rem; border: 1px solid var(--line); border-radius: .42rem; background: var(--white); }
+.sample-text:first-of-type { margin-top: 1rem; }
 .sample-text h3 { font-size: 1rem; letter-spacing: 0; }
+.sample-text h3 span { color: var(--muted); font-size: .9rem; font-weight: 550; margin-inline-start: .35rem; }
 .sample-text p { margin: .35rem 0 0; line-height: 1.5; }
 .sample-text strong { color: var(--teal); white-space: nowrap; }
 .sample-export { border-color: #8cbbab; background: #e5f3eb; }
@@ -71,6 +70,14 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-siz
 .section { padding-block: clamp(2.75rem, 6vw, 5rem); }
 .section-heading { max-width: 43rem; margin-bottom: 1.9rem; }
 .section-heading > p:last-child { font-size: 1.08rem; }
+.amendment-section { background: #edf4ef; border-bottom: 1px solid var(--line); }
+.amendment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.amendment-panel { min-width: 0; padding: clamp(1.05rem, 3vw, 1.65rem); border: 1px solid var(--line); border-radius: .65rem; background: var(--white); }
+.amendment-register { padding: 0; margin: .7rem 0 1rem; list-style: none; }
+.amendment-register li { display: grid; gap: .14rem; padding: .6rem 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.amendment-register li code { color: var(--muted); }
+.amendment-prompt { margin: .85rem 0; padding: .75rem 1rem; border-inline-start: 3px solid #699e8c; background: #e5f3eb; }
+.amendment-proof { max-width: 76ch; margin: 1.15rem 0 0; }
 .demo-controls { display: inline-flex; flex-wrap: wrap; gap: .4rem; background: #e7efe9; border: 1px solid var(--line); border-radius: .6rem; padding: .3rem; margin-bottom: .95rem; }
 .demo-controls button { background: transparent; border: 0; color: var(--ink); padding: .65rem .85rem; border-radius: .36rem; font: 680 1rem/1.25 "Segoe UI", system-ui, sans-serif; cursor: pointer; }
 .demo-controls button:hover { background: #d7e7de; }
@@ -111,7 +118,7 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-siz
 .site-footer span { margin-inline: .4rem; }
 
 @media (max-width: 52rem) {
-  .hero-grid, .plan-step, .result-step, .options-grid, .scope { grid-template-columns: 1fr; }
+  .hero-grid, .plan-step, .result-step, .options-grid, .amendment-grid, .scope { grid-template-columns: 1fr; }
   .hero-sample { max-width: 38rem; }
 }
 

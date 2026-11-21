@@ -2,3 +2,4 @@ examples/** -text
 docs/demo/cedar-relay-*.md -text
 docs/demo/cedar-relay-logical.json -text
 docs/demo/cedar-relay-combined.json -text
+docs/demo/amendments/** -text
