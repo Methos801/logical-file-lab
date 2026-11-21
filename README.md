@@ -24,6 +24,7 @@ notice period is ten days in one and thirty days in the other. The manifest
 lists both original filenames and source IDs. Each record in the combined
 bank retains its own full extracted text and outline, so you can ask for
 Section 4.2 from each and check the quotes against the originals.
+[Check each citation against the original and bank](https://methos801.github.io/logical-file-lab/#check-citations).
 [Original amendments](examples/Legal-Amendments/) · [Manifest](docs/demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_manifest_controller.md) · [Markdown bank](docs/demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_sources_0001_bank.md) · [JSON bank](docs/demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_sources_0001_bank.json) · [Receipt](docs/demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/run_receipt.json)
 
 ## Try the Cedar Relay walkthrough
