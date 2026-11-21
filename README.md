@@ -5,6 +5,11 @@ Did the wording survive conversion? Which file did it come from? What still
 needs review? Logical File Lab prepares Markdown and JSON with the full
 extracted text, a record for each source, and the gaps flagged during conversion.
 
+**[Download Windows Portable Preview 1 (ZIP)](https://github.com/Methos801/logical-file-lab/releases/download/windows-preview-1/Logical-File-Lab-Windows-Preview.zip)**
+
+For Windows 11 x64. Extract the entire unsigned ZIP and open `Logical File Lab.exe`.
+[See requirements and checksums](https://github.com/Methos801/logical-file-lab/releases/tag/windows-preview-1).
+
 [Try the amendment example](https://methos801.github.io/logical-file-lab/#amendments) · [Open the 90-second walkthrough](https://methos801.github.io/logical-file-lab/#demo) · [Read the Windows user manual](docs/user-manual.md) · [Browse the synthetic examples](examples/)
 
 ![New Conversion with a fictional source folder and Markdown plus JSON selected](docs/screenshots/new-conversion.png)
@@ -46,8 +51,8 @@ review build. [See the Windows results](docs/screenshots/results-unicode.png)
 
 ## Preview scope
 
-The Windows application is in private review. Its current source and bank text limits
-are 64 MiB. The preview works best with UTF-8 text, Markdown, CSV and TSV.
+The preview has 64 MiB source and bank text limits. It works best with
+UTF-8 text, Markdown, CSV and TSV.
 Word and PDF extraction can depend on installed converters. Review coverage
 holds alongside the original source.
 
