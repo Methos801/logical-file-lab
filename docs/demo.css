@@ -21,7 +21,7 @@ a:hover { text-decoration-thickness: .13em; }
 img { display: block; max-width: 100%; height: auto; }
 figure { margin: 0; }
 h1, h2, h3, h4 { color: var(--ink); line-height: 1.13; margin: 0; }
-h1 { font-size: clamp(2.6rem, 5.45vw, 4.72rem); letter-spacing: -.065em; max-width: 12ch; }
+h1 { font-size: clamp(2.45rem, 4.3vw, 4rem); letter-spacing: -.05em; max-width: 21ch; }
 h2 { font-size: clamp(2rem, 3.9vw, 3.1rem); letter-spacing: -.045em; }
 h3 { font-size: 1.7rem; letter-spacing: -.026em; }
 h4 { font-size: 1.08rem; }
@@ -42,16 +42,30 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-siz
 
 .hero { background: #143338; color: #d7e6e2; }
 .hero h1 { color: #f1f9f5; }
-.hero-grid { display: grid; grid-template-columns: .93fr 1.07fr; gap: clamp(2rem, 4vw, 4rem); align-items: center; padding-block: clamp(3rem, 7vw, 6.5rem); }
+.hero-grid { display: grid; grid-template-columns: 1.18fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; padding-block: clamp(2.4rem, 5vw, 4.5rem); }
 .eyebrow { color: var(--teal); font-size: .87rem; font-weight: 730; letter-spacing: .09em; text-transform: uppercase; margin: 0 0 .8rem; }
 .hero .eyebrow { color: #9fdfc7; }
-.hero-copy { max-width: 39ch; font-size: 1.14rem; margin-block: 1.3rem 1.65rem; }
+.hero-copy { max-width: 52ch; font-size: 1.08rem; margin-block: 1.05rem; }
+.review-questions { display: grid; gap: .65rem; margin: 1.25rem 0 1.55rem; }
+.review-questions div { border-inline-start: 2px solid #659d8d; padding-inline-start: .75rem; }
+.review-questions dt { color: #f1f9f5; font-weight: 700; }
+.review-questions dd { margin: 0; }
 .actions, .file-links { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 1.3rem; }
 .button { display: inline-block; border-radius: .42rem; padding: .65rem .95rem; color: #123c36; background: var(--mint); font-weight: 720; text-decoration: none; }
 .button:hover { background: #edf9f2; }
 .quiet-link { color: #e3f2ee; }
-.hero-preview img { border: 1px solid #6c8d85; border-radius: .6rem; box-shadow: 0 .8rem 2.4rem #071f2480; }
-.hero-preview figcaption { color: #c0d6ce; font-size: .9rem; margin-top: .7rem; }
+.hero-sample { min-width: 0; padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid #b2c9bf; border-radius: .75rem; background: var(--paper); color: var(--body); box-shadow: 0 .8rem 2.4rem #071f2480; }
+.hero-sample .eyebrow { color: var(--teal); margin-bottom: .55rem; }
+.hero-sample h2 { font-size: clamp(1.65rem, 3vw, 2.3rem); letter-spacing: -.035em; }
+.sample-source { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .8rem; margin: .85rem 0 1.15rem; }
+.sample-source code, .sample-text code { overflow-wrap: anywhere; }
+.sample-source span { color: var(--muted); font-size: .9rem; }
+.sample-text { padding: .75rem .85rem; margin-block: .6rem; border: 1px solid var(--line); border-radius: .42rem; background: var(--white); }
+.sample-text h3 { font-size: 1rem; letter-spacing: 0; }
+.sample-text p { margin: .35rem 0 0; line-height: 1.5; }
+.sample-text strong { color: var(--teal); white-space: nowrap; }
+.sample-export { border-color: #8cbbab; background: #e5f3eb; }
+.sample-note { margin: 1rem 0 0; }
 
 .section { padding-block: clamp(2.75rem, 6vw, 5rem); }
 .section-heading { max-width: 43rem; margin-bottom: 1.9rem; }
@@ -89,8 +103,7 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-siz
 
 @media (max-width: 52rem) {
   .hero-grid, .plan-step, .result-step, .evidence-grid, .scope { grid-template-columns: 1fr; }
-  .hero h1 { max-width: 15ch; }
-  .hero-preview { max-width: 38rem; }
+  .hero-sample { max-width: 38rem; }
 }
 
 @media (max-width: 36rem) {

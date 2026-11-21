@@ -1,9 +1,9 @@
 # Logical File Lab
 
-Prepare legal source files for AI-assisted review. When a statute set or
-exhibit bundle is converted for AI, missing text can be hard to spot. Logical
-File Lab creates portable Markdown and JSON with the full extracted text,
-the identity of each original, and any coverage gaps that need review.
+Before you ask AI about a statute set or exhibit bundle, check three things.
+Did the wording survive conversion? Which file did it come from? What still
+needs review? Logical File Lab prepares Markdown and JSON with the full
+extracted text, a record for each source, and the gaps flagged during conversion.
 
 [Open the 90-second demo](https://methos801.github.io/logical-file-lab/#demo) · [Read the Windows user manual](docs/user-manual.md) · [Browse the synthetic examples](examples/)
 

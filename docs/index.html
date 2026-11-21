@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Prepare statutes, exhibits, and other source files for AI-assisted legal review. Keep exact extracted text, source identity, and coverage holds in auditable Markdown and JSON.">
+  <meta name="description" content="Check what made it into your AI review files. Compare extracted legal source text with the originals, trace passages to their files, and see what still needs review.">
   <meta name="theme-color" content="#143338">
   <title>Logical File Lab | Prepare legal sources for AI review</title>
   <link rel="stylesheet" href="demo.css">
@@ -26,27 +26,41 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="shell hero-grid">
         <div>
-          <p class="eyebrow">Local source preparation</p>
-          <h1 id="hero-title">Prepare legal sources for AI-assisted review.</h1>
-          <p class="hero-copy">Legal review depends on exact wording and knowing where it came from. When you convert a statute set or exhibit bundle for AI, missing text can be hard to spot.</p>
-          <p class="hero-copy">Logical File Lab prepares Markdown and JSON for AI tools, with the full extracted text, the identity of each original, and any coverage gaps that need review.</p>
+          <p class="eyebrow">Source preparation for legal AI</p>
+          <h1 id="hero-title">Check what made it into your AI review files.</h1>
+          <p class="hero-copy">Before you ask AI about a statute set or an exhibit bundle, you need to know what the conversion captured. Logical File Lab prepares Markdown and JSON you can inspect alongside the originals.</p>
+          <dl class="review-questions">
+            <div><dt>Did the wording survive?</dt><dd>Compare the full extracted text with the original.</dd></div>
+            <div><dt>Which file did it come from?</dt><dd>Keep each source identifiable, even in a combined set.</dd></div>
+            <div><dt>What still needs review?</dt><dd>See which sources passed and where conversion flagged a gap.</dd></div>
+          </dl>
           <div class="actions">
-            <a class="button" href="#demo">Try the guided demo</a>
-            <a class="quiet-link" href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md">Read the user manual</a>
+            <a class="button" href="#exports">Compare an original with its exports</a>
+            <a class="quiet-link" href="#demo">See the full walkthrough</a>
           </div>
         </div>
-        <figure class="hero-preview">
-          <img src="screenshots/new-conversion.png" width="1280" height="840" alt="Logical File Lab New Conversion screen with a fictional source folder, separate destination, and Markdown and JSON selected">
-          <figcaption>Windows preview with fictional sample paths</figcaption>
-        </figure>
+        <aside class="hero-sample" aria-labelledby="sample-title">
+          <p class="eyebrow">Fictional statute set</p>
+          <h2 id="sample-title">Check the end of a long source</h2>
+          <p class="sample-source"><a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Unicode-Sources/01_fictional_statute_set.txt"><code>01_fictional_statute_set.txt</code></a> <span>4,500 sections</span></p>
+          <div class="sample-text">
+            <h3>Final line in the original</h3>
+            <p><code>FINAL SYNTHETIC STATUTE MARKER: <strong>PAPER-FERRY-4500.</strong></code></p>
+          </div>
+          <div class="sample-text sample-export">
+            <h3>Final line in Markdown and JSON</h3>
+            <p><code>FINAL SYNTHETIC STATUTE MARKER: <strong>PAPER-FERRY-4500.</strong></code></p>
+          </div>
+          <p class="sample-note">The Windows test compared the full source with both exports. <a href="screenshots/results-unicode.png">See the result</a>.</p>
+        </aside>
       </div>
     </section>
 
     <section class="shell section" id="demo" aria-labelledby="demo-title">
       <div class="section-heading">
         <p class="eyebrow">90-second walkthrough</p>
-        <h2 id="demo-title">Follow a fictional workshop’s records</h2>
-        <p>Start with a Markdown note, an inventory CSV, and a text log. Follow one passage from the original into both exports, then use the receipt to see which sources passed and which need review.</p>
+        <h2 id="demo-title">Trace a passage back to its source</h2>
+        <p>Use a fictional workshop’s records to review a plan, compare one passage in the original and both exports, and read the receipt.</p>
       </div>
 
       <div class="demo-controls" role="group" aria-label="Choose a walkthrough step" hidden>
@@ -64,7 +78,10 @@
             <li><code>02_inventory.csv</code></li>
             <li><code>03_field_log.txt</code></li>
           </ul>
-          <a href="https://github.com/Methos801/logical-file-lab/tree/main/examples/Sources">Open the three source files</a>
+          <div class="file-links">
+            <a href="https://github.com/Methos801/logical-file-lab/tree/main/examples/Sources">Open the three source files</a>
+            <a href="screenshots/new-conversion.png">See the Windows setup</a>
+          </div>
         </div>
         <a class="screenshot-link" href="screenshots/preflight.png">
           <img src="screenshots/preflight.png" width="1280" height="1120" alt="Saved plan for three synthetic sources with the Start conversion control">
@@ -72,7 +89,7 @@
         </a>
       </article>
 
-      <article class="step" id="exports" data-step aria-labelledby="exports-title">
+      <article class="step" id="exports" data-step tabindex="-1" aria-labelledby="exports-title">
         <h3 id="exports-title">Compare a source with its exports</h3>
         <p>In both exports, find the closing inventory line. It sits in the full extracted text and can be traced back to the original note.</p>
         <div class="comparison">
