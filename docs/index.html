@@ -16,7 +16,7 @@
       <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">LFL</span> Logical File Lab</a>
       <div class="nav-links">
         <a href="#demo">Demo</a>
-        <a href="#windows-test">Windows test</a>
+        <a href="#output-options">Output options</a>
         <a href="https://github.com/Methos801/logical-file-lab">GitHub</a>
       </div>
     </nav>
@@ -29,15 +29,16 @@
           <p class="eyebrow">Source preparation for legal AI</p>
           <h1 id="hero-title">Check what made it into your AI review files.</h1>
           <p class="hero-copy">Before you ask AI about a statute set or an exhibit bundle, you need to know what the conversion captured. Logical File Lab prepares Markdown and JSON you can inspect alongside the originals.</p>
+          <div class="actions">
+            <a class="button" href="#exports">Compare an original with its exports</a>
+            <a class="quiet-link" href="#demo">See the full walkthrough</a>
+          </div>
+          <p class="hero-note">Conversion runs offline. The Windows build is in private review.</p>
           <dl class="review-questions">
             <div><dt>Did the wording survive?</dt><dd>Compare the full extracted text with the original.</dd></div>
             <div><dt>Which file did it come from?</dt><dd>Keep each source identifiable, even in a combined set.</dd></div>
             <div><dt>What still needs review?</dt><dd>See which sources passed and where conversion flagged a gap.</dd></div>
           </dl>
-          <div class="actions">
-            <a class="button" href="#exports">Compare an original with its exports</a>
-            <a class="quiet-link" href="#demo">See the full walkthrough</a>
-          </div>
         </div>
         <aside class="hero-sample" aria-labelledby="sample-title">
           <p class="eyebrow">Fictional statute set</p>
@@ -111,17 +112,20 @@ The last entry is a blue paper tag reading CR-FINAL-317.</code></pre>
             </div>
           </div>
         </div>
-        <p class="step-note">Both export formats also reproduced the whole <a href="https://github.com/Methos801/logical-file-lab/blob/main/examples/Unicode-Sources/01_fictional_statute_set.txt">fictional 4,500-section statute set</a>, including its final marker <code>PAPER-FERRY-4500</code>. <a href="screenshots/results-unicode.png">See the Windows results</a>.</p>
+        <p class="step-note"><a href="#receipt">Read the results and see a coverage hold</a>.</p>
       </article>
 
-      <article class="step result-step" id="receipt" data-step aria-labelledby="receipt-title">
+      <article class="step result-step" id="receipt" data-step tabindex="-1" aria-labelledby="receipt-title">
         <div>
           <h3 id="receipt-title">Account for every selected source</h3>
-          <p>The receipt for the three-file run recorded 3 selected, 3 passed, and 6 source exports. The manifest routes readers to the individual source records.</p>
-          <p>A separate sample with duplicate CSV headers shows how a review hold appears. Its original text stays available in both exports.</p>
+          <p>The receipt for the three-file run recorded 3 selected, 3 passed, and 6 source exports. The manifest lists the source records and where to find them.</p>
+          <div class="review-hold">
+            <h4>Separate CSV example · Review hold</h4>
+            <p>Two columns share the heading <code>count</code>. Both exports retain the CSV text, and the hold flags the table structure for review.</p>
+          </div>
           <div class="file-links">
             <a href="demo/receipt-excerpt.json">Read the synthetic receipt excerpt</a>
-            <a href="#windows-test">See the recovery test</a>
+            <a href="#output-options">Explore output options</a>
           </div>
         </div>
         <a class="screenshot-link" href="screenshots/results-hold.png">
@@ -131,19 +135,30 @@ The last entry is a blue paper tag reading CR-FINAL-317.</code></pre>
       </article>
     </section>
 
-    <section class="evidence" id="windows-test" aria-labelledby="evidence-title">
-      <div class="shell evidence-grid">
+    <section class="output-options" id="output-options" aria-labelledby="options-title">
+      <div class="shell options-grid">
         <div>
-          <p class="eyebrow">Windows 11 x64</p>
-          <h2 id="evidence-title">Verified recovery on a second machine</h2>
-          <p>The same preview ZIP passed launch, synthetic conversion, and forced interruption and recovery on a second Windows machine. Once one source was committed, the test stopped the controller and recovered the original job from the desktop app.</p>
-          <p class="evidence-note">The fixture’s final receipt accounted for both sources, with one pass and one expected RTF coverage hold. The coverage hold kept the flattened source text available for review.</p>
+          <h2 id="options-title">Choose how to package your sources</h2>
+          <p>Keep a distinct record for each source. The manifest helps a reader find the right record and see its review status in any package.</p>
+          <dl class="package-list">
+            <div><dt>One output per source</dt><dd>Open or share an individual file on its own.</dd></div>
+            <div><dt>One combined bank</dt><dd>Keep the whole set in one file per format.</dd></div>
+            <div><dt>Several grouped banks</dt><dd>Set how many sources go into each smaller bank.</dd></div>
+          </dl>
         </div>
-        <dl class="proof">
-          <div><dt>Committed exports</dt><dd>Both reused, with their bytes and timestamps intact</dd></div>
-          <div><dt>Source fidelity</dt><dd>Both originals unchanged and all four exports checked for full text</dd></div>
-          <div><dt>Process cleanup</dt><dd>The fixture converter and its child stopped within 74 ms in this run</dd></div>
-        </dl>
+        <div class="bank-example">
+          <h3>Three sources in one bank</h3>
+          <p>The Cedar Relay sample keeps these fictional files as separate records in the same export.</p>
+          <ul aria-label="Source records in the sample bank">
+            <li><code>01_project_notes.md</code><span>Pass</span></li>
+            <li><code>02_inventory.csv</code><span>Pass</span></li>
+            <li><code>03_field_log.txt</code><span>Pass</span></li>
+          </ul>
+          <div class="file-links">
+            <a href="demo/cedar-relay-combined.md" download>Download Markdown bank</a>
+            <a href="demo/cedar-relay-combined.json" download>Download JSON bank</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -151,14 +166,19 @@ The last entry is a blue paper tag reading CR-FINAL-317.</code></pre>
       <div>
         <h2 id="scope-title">Use it at your desk or in a workflow</h2>
         <p>Use the <strong>Windows app</strong> to choose sources, review a plan, and inspect the results. For recurring work, run the <a href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md#command-line-use-and-local-storage">same engine from a script</a> and read its structured progress and results.</p>
-        <p>Conversion runs offline and leaves the originals in place. You choose which outputs to provide to an AI tool.</p>
-        <p>The Windows build is in private review. The preview handles UTF-8 text, Markdown, CSV, and TSV directly, with 64 MiB source and bank text limits. Word and PDF extraction can depend on installed converters and may carry coverage holds.</p>
+        <p>Original files stay in place. You choose which outputs to provide to an AI tool.</p>
+        <p>The preview handles UTF-8 text, Markdown, CSV, and TSV directly, with 64 MiB source and bank text limits. Word and PDF extraction can depend on installed converters and may carry coverage holds.</p>
       </div>
       <div class="scope-links">
         <a href="https://github.com/Methos801/logical-file-lab/blob/main/docs/user-manual.md">Windows user manual</a>
         <a href="https://github.com/Methos801/logical-file-lab/tree/main/examples">Synthetic examples</a>
         <a href="https://github.com/Methos801">Developer profile</a>
       </div>
+    </section>
+
+    <section class="shell test-note" id="windows-test" aria-labelledby="test-title">
+      <h2 id="test-title">Preview test notes</h2>
+      <p>The same preview ZIP passed startup, synthetic conversion, and forced interruption and recovery on a second Windows 11 x64 computer. The recovery run resumed the original job, preserved the two completed exports, and verified full text in all four exports.</p>
     </section>
   </main>
 

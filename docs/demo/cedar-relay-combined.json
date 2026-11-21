@@ -1,0 +1,313 @@
+{
+  "schema_version": "0.1",
+  "logical_file_metadata": {
+    "bank_name": "Sources",
+    "bank_id": "sources_0001",
+    "mode": "N:1",
+    "engine": "deterministic",
+    "lfl_version": "0.1",
+    "conversion_date": "2026-11-21",
+    "source_count": 3,
+    "target_surfaces": [
+      "local"
+    ],
+    "output_verbosity": "full",
+    "schema_variant": "audit_md",
+    "table_policy": "preserve",
+    "packing_policy": "none",
+    "research_citation_date": "2026-06-28",
+    "promotion_status": "draft",
+    "intended_use": "Source-grounding bank for AI retrieval.",
+    "not_for": "Final conclusions or source replacement."
+  },
+  "universal_manifest": {
+    "source_ids": [
+      "SRC-2D210F82C16EBB85CFC1",
+      "SRC-B4556297EF4A17CE863C",
+      "SRC-5798BAFE9D117852F61A"
+    ],
+    "critical_first_read_sections": [
+      "logical_file_metadata",
+      "universal_manifest",
+      "source_role_lock",
+      "source_scope_controls",
+      "validation_and_promotion"
+    ]
+  },
+  "source_role_lock": {
+    "statement": "This bank represents only the sources identified in universal_manifest.",
+    "constraints": [
+      "May be used as source text for propositions traceable to the listed sources.",
+      "End-users are responsible for verifying currentness and authority at time of use.",
+      "Must not displace governing instruments, verified law, or user instructions.",
+      "If sources conflict with each other, report the conflict instead of resolving it silently."
+    ]
+  },
+  "retrieval_index": {
+    "sections": [
+      {
+        "section_id": "universal_manifest",
+        "title": "Source inventory",
+        "use": "Use to identify which sources are in this bank."
+      },
+      {
+        "section_id": "source.content",
+        "title": "Source bank content",
+        "use": "Use as the primary converted text for all sources."
+      },
+      {
+        "section_id": "source.holds",
+        "title": "Holds and limitations",
+        "use": "Use before relying on any source."
+      }
+    ],
+    "trigger_phrases": [],
+    "currentness_signals": []
+  },
+  "fixed_mapping_index": {
+    "sources": [
+      {
+        "source_id": "SRC-2D210F82C16EBB85CFC1",
+        "source_file_name": "01_project_notes.md",
+        "source_path": "01_project_notes.md",
+        "source_type": "md (Markdown)",
+        "source_size_bytes": 254,
+        "source_mtime": "2026-11-21T04:53:37.475765+00:00",
+        "sha256_original": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+        "extraction_method": "plain",
+        "sha256_extracted": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+        "sha256_pre_scrub": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+        "extraction_status": "ok",
+        "converter_failures": [],
+        "extraction_note": "",
+        "scrub_policy": "none",
+        "scrub_actions": [],
+        "scrub_char_delta": 0
+      },
+      {
+        "source_id": "SRC-B4556297EF4A17CE863C",
+        "source_file_name": "02_inventory.csv",
+        "source_path": "02_inventory.csv",
+        "source_type": "csv (document)",
+        "source_size_bytes": 114,
+        "source_mtime": "2026-11-21T04:53:37.475765+00:00",
+        "sha256_original": "4a869f574fdcff594aac9c1b5c20cae30a2a0159e04c229189d8b070c0313d97",
+        "extraction_method": "plain",
+        "sha256_extracted": "4a869f574fdcff594aac9c1b5c20cae30a2a0159e04c229189d8b070c0313d97",
+        "sha256_pre_scrub": "4a869f574fdcff594aac9c1b5c20cae30a2a0159e04c229189d8b070c0313d97",
+        "extraction_status": "ok",
+        "converter_failures": [],
+        "extraction_note": "",
+        "scrub_policy": "none",
+        "scrub_actions": [],
+        "scrub_char_delta": 0
+      },
+      {
+        "source_id": "SRC-5798BAFE9D117852F61A",
+        "source_file_name": "03_field_log.txt",
+        "source_path": "03_field_log.txt",
+        "source_type": "txt (plain text)",
+        "source_size_bytes": 211,
+        "source_mtime": "2026-11-21T04:53:37.475765+00:00",
+        "sha256_original": "6916efb35a86cd9de7bb450318960dc56d79c1c4751ed18431002eee1de5bdee",
+        "extraction_method": "plain",
+        "sha256_extracted": "6916efb35a86cd9de7bb450318960dc56d79c1c4751ed18431002eee1de5bdee",
+        "sha256_pre_scrub": "6916efb35a86cd9de7bb450318960dc56d79c1c4751ed18431002eee1de5bdee",
+        "extraction_status": "ok",
+        "converter_failures": [],
+        "extraction_note": "",
+        "scrub_policy": "none",
+        "scrub_actions": [],
+        "scrub_char_delta": 0
+      }
+    ]
+  },
+  "source_scope_controls": {
+    "included": [
+      "SRC-2D210F82C16EBB85CFC1",
+      "SRC-B4556297EF4A17CE863C",
+      "SRC-5798BAFE9D117852F61A"
+    ],
+    "excluded": []
+  },
+  "local_controls": {
+    "surface": "local",
+    "mode": "N:1",
+    "profile_preference": "md",
+    "verbosity": "full",
+    "schema_variant": "audit_md",
+    "table_policy": "preserve",
+    "packing_policy": "none",
+    "research_citation_date": "2026-06-28",
+    "recommended_layout": "Flat Output/ folder; 00_manifest controller (or 00_*_bank) routes the set.",
+    "citation_rule": "Cite the source_id (e.g., SRC-XXXXXXXX) for every proposition.",
+    "notes": [
+      "Engine is Ollama; bring your own model.",
+      "Use the manifest/bank as the routing entry point."
+    ],
+    "applies_to_source_ids": [
+      "SRC-2D210F82C16EBB85CFC1",
+      "SRC-B4556297EF4A17CE863C",
+      "SRC-5798BAFE9D117852F61A"
+    ]
+  },
+  "anti_recursion_controls": {
+    "statement": "This bank must not be fed back to a model as a source for generating additional source documents."
+  },
+  "human_review_gate": {
+    "required": false,
+    "reason": "Deterministic build; no LLM-generated content."
+  },
+  "validation_and_promotion": {
+    "overall_status": "PASS",
+    "no_loss_register": {
+      "source_text_truncated": false,
+      "source_text_modified": false,
+      "note": "All source_text fields are verbatim copies of extracted text."
+    },
+    "packaging_holds": [],
+    "checks": [
+      {
+        "check": "all_sources_inventoried",
+        "result": "pass",
+        "note": "3 source(s) found and processed."
+      },
+      {
+        "check": "sources_extracted",
+        "result": "pass",
+        "note": "3/3 complete."
+      },
+      {
+        "check": "source_text_verbatim",
+        "result": "pass",
+        "note": "source_text is always a verbatim copy of extracted text."
+      }
+    ]
+  },
+  "source_documents": [
+    {
+      "source_id": "SRC-2D210F82C16EBB85CFC1",
+      "source_file_name": "01_project_notes.md",
+      "source_type": "md (Markdown)",
+      "conversion_status": "complete",
+      "extraction_status": "ok",
+      "holds": [],
+      "sha256_original": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+      "sha256_extracted": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+      "sha256_pre_scrub": "0e9d6d4dc28163f325a0533b1861e79f99ffc8412bd28ec56430103028f2140c",
+      "extraction_method": "plain",
+      "converter_failures": [],
+      "adapter": "generic",
+      "source_path": "01_project_notes.md",
+      "scrub_policy": "none",
+      "scrub_actions": [],
+      "scrub_char_delta": 0,
+      "orientation_summary": "[Not generated — deterministic engine (Tier-0). No LLM calls.]",
+      "source_text": "# Cedar Relay demo workbench\n\nThe Cedar Relay is a fictional volunteer workshop used to exercise the converter.\nThe planning box contains two trays marked Amber and Juniper.\n\n## Closing inventory\n\nThe last entry is a blue paper tag reading CR-FINAL-317.\n",
+      "source_text_basis": "full_extraction",
+      "derivatives": [],
+      "text_anomalies": [],
+      "domain_metadata": {},
+      "extracted_tables": [],
+      "citation_map": [],
+      "classification": "generic",
+      "classification_family": "undefined",
+      "classification_state": "undefined"
+    },
+    {
+      "source_id": "SRC-B4556297EF4A17CE863C",
+      "source_file_name": "02_inventory.csv",
+      "source_type": "csv (document)",
+      "conversion_status": "complete",
+      "extraction_status": "ok",
+      "holds": [],
+      "sha256_original": "4a869f574fdcff594aac9c1b5c20cae30a2a0159e04c229189d8b070c0313d97",
+      "sha256_extracted": "4a869f574fdcff594aac9c1b5c20cae30a2a0159e04c229189d8b070c0313d97",
+      "sha256_pre_scrub": "4a869f574fdcff594aac9c1b5c20cae30a2a0159e04c229189d8b070c0313d97",
+      "extraction_method": "plain",
+      "converter_failures": [],
+      "adapter": "table",
+      "source_path": "02_inventory.csv",
+      "scrub_policy": "none",
+      "scrub_actions": [],
+      "scrub_char_delta": 0,
+      "orientation_summary": "[Not generated — deterministic engine (Tier-0). No LLM calls.]",
+      "source_text": "item,count,location\nPaper tags,12,Amber tray\nSample cards,5,Juniper tray\nBlue tag CR-FINAL-317,1,Closing envelope\n",
+      "source_text_basis": "full_extraction",
+      "derivatives": [],
+      "text_anomalies": [],
+      "domain_metadata": {
+        "delimiter": "comma",
+        "columns": [
+          "item",
+          "count",
+          "location"
+        ],
+        "column_count": 3,
+        "row_count": 3
+      },
+      "extracted_tables": [
+        {
+          "columns": [
+            "item",
+            "count",
+            "location"
+          ],
+          "column_count": 3,
+          "row_count": 3,
+          "delimiter": "comma",
+          "preview_rows": [
+            {
+              "item": "Paper tags",
+              "count": "12",
+              "location": "Amber tray"
+            },
+            {
+              "item": "Sample cards",
+              "count": "5",
+              "location": "Juniper tray"
+            },
+            {
+              "item": "Blue tag CR-FINAL-317",
+              "count": "1",
+              "location": "Closing envelope"
+            }
+          ]
+        }
+      ],
+      "citation_map": [],
+      "classification": "table",
+      "classification_family": "tabular",
+      "classification_state": "classified"
+    },
+    {
+      "source_id": "SRC-5798BAFE9D117852F61A",
+      "source_file_name": "03_field_log.txt",
+      "source_type": "txt (plain text)",
+      "conversion_status": "complete",
+      "extraction_status": "ok",
+      "holds": [],
+      "sha256_original": "6916efb35a86cd9de7bb450318960dc56d79c1c4751ed18431002eee1de5bdee",
+      "sha256_extracted": "6916efb35a86cd9de7bb450318960dc56d79c1c4751ed18431002eee1de5bdee",
+      "sha256_pre_scrub": "6916efb35a86cd9de7bb450318960dc56d79c1c4751ed18431002eee1de5bdee",
+      "extraction_method": "plain",
+      "converter_failures": [],
+      "adapter": "generic",
+      "source_path": "03_field_log.txt",
+      "scrub_policy": "none",
+      "scrub_actions": [],
+      "scrub_char_delta": 0,
+      "orientation_summary": "[Not generated — deterministic engine (Tier-0). No LLM calls.]",
+      "source_text": "Cedar Relay field log\n2026-05-13 09:00 — Opened the fictional workshop.\n2026-05-13 10:15 — Checked the labels: café, jalapeño, and Zürich.\n2026-05-13 12:00 — The last field observation is LOG-TAIL-746.\n",
+      "source_text_basis": "full_extraction",
+      "derivatives": [],
+      "text_anomalies": [],
+      "domain_metadata": {},
+      "extracted_tables": [],
+      "citation_map": [],
+      "classification": "generic",
+      "classification_family": "undefined",
+      "classification_state": "undefined"
+    }
+  ]
+}

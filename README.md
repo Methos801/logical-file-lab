@@ -28,20 +28,11 @@ Conversion runs offline and keeps originals in place. You choose which outputs t
 
 Use one logical file per source, one combined bank, or several grouped banks.
 Banks keep identifiable records for each source. The manifest routes readers
-to those records.
+to those records. [Sample Markdown bank](docs/demo/cedar-relay-combined.md) · [Sample JSON bank](docs/demo/cedar-relay-combined.json)
 
 The fictional statute example includes 4,500 sections across three titles.
 Both formats preserved its Unicode text and final marker in the Windows
 review build. [See the Windows results](docs/screenshots/results-unicode.png)
-
-## Verified Windows recovery
-
-The same preview ZIP passed startup, conversion, and a forced interruption
-and recovery test on a second Windows 11 x64 machine. The desktop resumed
-the original job and reused both completed exports with their bytes and
-timestamps intact. The test verified full text in all four exports and
-accounted for both originals. Its final receipt recorded one pass and one
-expected RTF coverage hold. [Recovery walkthrough](https://methos801.github.io/logical-file-lab/#windows-test)
 
 ## Preview scope
 
@@ -51,3 +42,7 @@ Word and PDF extraction can depend on installed converters. Review coverage
 holds alongside the original source.
 
 The outputs include extracted source text even when structural coverage needs review.
+
+**Test notes.** The preview ZIP passed startup, synthetic conversion, and
+forced interruption and recovery on a second Windows 11 x64 machine.
+[Preview test notes](https://methos801.github.io/logical-file-lab/#windows-test)
