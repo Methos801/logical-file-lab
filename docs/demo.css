@@ -137,3 +137,16 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-siz
   .demo-controls { display: flex; }
   .demo-controls button { flex: 1 1 auto; }
 }
+
+/* Continuous walkthrough: use less vertical space between visible steps. */
+#mixed-receipt, #amendments > .shell, #demo { padding-block:clamp(2rem,4.5vw,3.4rem); }
+#mixed-receipt .section-heading, #demo .section-heading { margin-bottom:1.25rem; }
+#demo .step + .step { margin-top:.85rem; }
+#demo .step { scroll-margin-top:1rem; }
+
+
+/* Optional jump links; the demonstrations remain visible in reading order. */
+.example-links { display:flex; flex-wrap:wrap; align-items:baseline; gap:.25rem 1rem; padding-block:.8rem; border-bottom:1px solid #cbdad3; font-size:.94rem; }
+.example-links span { font-weight:700; }
+.example-links a { padding-block:.25rem; }
+@media(max-width:540px){.example-links span{flex-basis:100%}}

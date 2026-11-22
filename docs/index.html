@@ -7,7 +7,6 @@
   <meta name="theme-color" content="#143338">
   <title>Logical File Lab | Prepare legal sources for AI review</title>
   <link rel="stylesheet" href="demo.css">
-  <script src="demo.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -57,6 +56,30 @@
       </div>
     </section>
 
+    <nav class="shell example-links" aria-label="Jump to a worked example">
+      <span>On this page</span>
+      <a href="#amendments">Compare amendments</a>
+      <a href="#mixed-receipt">See what passed or was held</a>
+      <a href="#demo">Follow the full walkthrough</a>
+    </nav>
+
+    <section class="shell section" id="mixed-receipt" aria-labelledby="mixed-receipt-title">
+      <div class="section-heading">
+        <p class="eyebrow">Completeness and recovery</p>
+        <h2 id="mixed-receipt-title">A usable export is not the same as a complete packet.</h2>
+        <p>In a mixed conversion, some files may be ready to review while one still needs attention. The receipt accounts for both. That matters when the next person sees only the exported bank and might otherwise assume it contains everything.</p>
+      </div>
+      <div class="amendment-grid">
+        <article class="bank-example" aria-labelledby="mixed-test-title"><h3 id="mixed-test-title">Five inputs, all accounted for</h3>
+          <ul><li><code>01 first.txt</code><span>Pass</span></li><li><code>02 byte duplicate.txt</code><span>Pass</span></li><li><code>résumé Δ.txt</code> in a long path<span>Pass</span></li><li><code>04 converter hold.pdf</code><strong>Hold</strong></li><li><code>.hidden synthetic.txt</code><strong>Excluded</strong></li></ul>
+          <p>In this synthetic packaging test, the first two files have identical bytes but different source IDs. The three successful payloads are checked against their originals. The failed PDF does not become a successful empty export.</p>
+        </article>
+        <article class="bank-example" aria-labelledby="resume-title"><h3 id="resume-title">Restart without discarding good work</h3>
+          <p>In a separate fault test, reopening the same job preserves previously validated outputs and repairs the missing or damaged sibling. If the final receipt cannot be validated, the run stays on hold.</p>
+          <div class="review-hold"><strong>What this shows</strong><p>These are synthetic implementation tests, not a recording from the published Windows download. The released build’s own example and test notes appear on this page.</p></div>
+        </article>
+      </div>
+    </section>
     <section class="amendment-section" id="amendments" aria-labelledby="amendments-title">
       <div class="shell section">
         <div class="section-heading">
@@ -106,22 +129,16 @@
             </li>
           </ul>
         </section>
-        <p class="amendment-proof">We checked that these combined Markdown and JSON exports preserve the full text and source IDs for both amendments. The receipt accounts for both sources and records hashes for both exports. <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/run_receipt.json">View the receipt</a> · <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/99_validation_note.md">Read the validation note</a></p>
+        <p class="amendment-proof">We checked that these combined Markdown and JSON exports preserve the full text and source IDs for both amendments. The receipt accounts for both sources and records hashes for both exports. <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/run_receipt.json">View the receipt</a> · <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/00_manifest_controller.json">Controller JSON</a> · <a href="demo/amendments/64081daa55ad4ab5a30cac8e5d50d9d9/99_validation_note.md">Read the validation note</a></p>
         <p class="amendment-proof">The receipt records deterministic conversion. The bank’s local-model notes are guidance for using the exported files later.</p>
       </div>
     </section>
 
     <section class="shell section" id="demo" aria-labelledby="demo-title">
       <div class="section-heading">
-        <p class="eyebrow">90-second walkthrough</p>
+        <p class="eyebrow">Worked example</p>
         <h2 id="demo-title">Trace a passage back to its source</h2>
         <p>Use a fictional workshop’s records to review a plan, compare one passage in the original and both exports, and read the receipt.</p>
-      </div>
-
-      <div class="demo-controls" role="group" aria-label="Choose a walkthrough step" hidden>
-        <button type="button" aria-controls="plan" aria-pressed="true">Review the plan</button>
-        <button type="button" aria-controls="exports" aria-pressed="false">Compare the text</button>
-        <button type="button" aria-controls="receipt" aria-pressed="false">Read the results</button>
       </div>
 
       <article class="step plan-step" id="plan" data-step aria-labelledby="plan-title">
